@@ -1,0 +1,68 @@
+
+.header{
+    height: 100vh;
+    padding: 10px;
+    &__fixed{
+        position: fixed;
+    }
+    &__not-fixed{
+        position: relative;
+    }
+    &__text{
+        top: 60vh;
+        left: 65vw;
+        position: absolute;
+        &__visible{
+            opacity: 1;
+            transition: opacity 1s ease-out;
+        }
+        &__hidden{
+         opacity: 0;
+         transition: opacity 1s ease-out;
+        }
+       
+        p{
+          
+            font-size: .7rem;
+            line-height: 15px;
+            font-family: Helvetica Neue;
+            
+        }
+        h5{
+            margin-bottom: 0px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            font-family: Helvetica Neue;
+        }
+     
+        
+    }
+    img{
+        margin-top: 10px;
+    }
+    &__gif{
+        width: 100vw;
+       
+        img{
+            height: 60vh;
+           
+            
+        }
+      
+    }
+}
+
+.fixed{
+    position: fixed;
+    top: 10vh; 
+    left: 10vw;
+   
+}
+
+
+.absolute2{
+    position: absolute;
+    top:200vh;
+    left: 10vw;
+
+}
