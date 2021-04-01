@@ -67,7 +67,7 @@ import p14 from '../images/p14.jpg'
 import p15 from '../images/p15.jpg'
 import p16 from '../images/p16.jpg'
 import p17 from '../images/p17.png'
-import p18 from '../images/p17.png'
+import p18 from '../images/p18.png'
 import p19 from '../images/p19.png'
 import p20 from '../images/p20.png'
 import p21 from '../images/p21.png'
@@ -81,7 +81,7 @@ import p28 from '../images/p28.jpg'
 import p29 from '../images/p29.png'
 import p30 from '../images/p30.png'
 import p31 from '../images/p31.jpg'
-import p32 from '../images/p32.jpg'
+import p32 from '../images/p32.png'
 import p33 from '../images/p33.png'
 import p34 from '../images/p34.png'
 import p35 from '../images/p35.png'
@@ -287,7 +287,7 @@ class IndexPage extends Component {
               CONFINEMENT.<span className='times'>02</span>
             </div>
             <div className="home__header__right">
-              LES ÉCHINES  <img src={cd} alt='img' />
+              LES ÉCHINES  <img className='emoji' src={flocon} alt='img' />
               <span className='times'> 73700</span>
             </div>
           </div>
