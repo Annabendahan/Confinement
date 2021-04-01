@@ -177,7 +177,7 @@ class IndexPage extends Component {
       {
         son: son13,
         duration: 90,
-        title: 'RETOUR À PARIS '
+        title: 'RETOUR À PARIS  '
       }
     ],
     playing: 'STOPPED',
