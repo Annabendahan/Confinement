@@ -46,6 +46,7 @@ import miniline from '../images/miniline.svg'
 
 import cd from '../images/cd2.svg'
 import music from '../images/music.svg'
+import flocon from '../images/flocon.svg'
 
 
 
@@ -55,7 +56,7 @@ import p3 from '../images/p3.png'
 import p4 from '../images/p4.png'
 import p5 from '../images/p5.jpg'
 import p6 from '../images/p6.png'
-import p7 from '../images/p7.png'
+import p7 from '../images/p7.jpg'
 import p8 from '../images/p8.png'
 import p9 from '../images/p9.jpg'
 import p10 from '../images/p10.png'
@@ -286,7 +287,7 @@ class IndexPage extends Component {
               CONFINEMENT.<span className='times'>02</span>
             </div>
             <div className="home__header__right">
-              LES ÉCHINES <img src={cd} alt='img' />
+              LES ÉCHINES  <img src={cd} alt='img' />
               <span className='times'> 73700</span>
             </div>
           </div>
@@ -327,7 +328,8 @@ class IndexPage extends Component {
                     <div className="home__footer__player__infos__line__over" onClick={(event) => this.handleClick(event)} style={{ margin: 'auto', width: '200px', height: '8px' }}> </div>
 
                   </div>
-                  <div className="home__footer__player__infos__line__title" ><span className='times'> {soundNb}/{playlistLength}  </span> <img style={{ padding: '5px 4px' }} src={miniline} alt='img' /> {this.state.playlist[this.state.sonIndex].title}  {this.state.sonIndex === 0 ? <img src={music} alt='img' /> : ''}
+                  <div className="home__footer__player__infos__line__title" ><span className='times'> {soundNb}/{playlistLength}  </span> <img style={{ padding: '5px 4px' }} src={miniline} alt='img' /> {this.state.playlist[this.state.sonIndex].title}
+                    {this.state.sonIndex === 0 ? <img className='emoji' src={music} alt='img' /> : ''} {this.state.sonIndex === 5 ? <img className='emoji' src={flocon} alt='img' /> : ''}
                   </div>
                   <br />
                 </div>
