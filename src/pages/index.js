@@ -128,7 +128,7 @@ class IndexPage extends Component {
       {
         son: son3,
         duration: 24,
-        title: 'LES TOURISTES AU VILLAGE '
+        title: 'LES PARISIENS '
       },
       {
         son: son4,
