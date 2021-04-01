@@ -31,9 +31,9 @@
     &__content{
         display: flex;
         flex-direction: column;
-        height: 87%;
+        height: 85%;
         @include breakpoint(s){
-            height: 90%;
+            height: 88%;
         }
         img{
            margin:auto;
@@ -102,7 +102,7 @@
             }
             &__infos{
                 &__globalline{
-                    margin-top: 5px;
+                    margin-top: 10px;
                     &__time{
                     
                       display: flex;
