@@ -279,7 +279,7 @@ class IndexPage extends Component {
 
     return (
       <Layout>
-        <SEO title="Home" />
+        <SEO title="Confinement02" />
         <div className="home">
 
           <div className="home__header">

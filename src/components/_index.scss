@@ -31,7 +31,7 @@
     &__content{
         display: flex;
         flex-direction: column;
-        height: 85%;
+        height: 84%;
         @include breakpoint(s){
             height: 88%;
         }
@@ -47,7 +47,7 @@
     }
     &__footer{
         position: fixed;
-        height: 18%;
+        height: 20%;
         @include breakpoint(xxl){
             height: 11%;
         }
