@@ -11,10 +11,10 @@ import SEO from "../components/seo"
 
 
 import son0 from '../images/intro.mp3'
-import son1 from '../images/Hotel.mp3'
-import son2 from '../images/footing.mp3'
-import son3 from '../images/Lestouristes.mp3'
-import son4 from '../images/Café.mp3'
+import son1 from '../images/footing.mp3'
+import son2 from '../images/Hotel.mp3'
+import son3 from '../images/Café.mp3'
+import son4 from '../images/Lestouristes.mp3'
 import son5 from '../images/neige.mp3'
 import son6 from '../images/Annabdip.mp3'
 import son7 from '../images/Latechnologie.mp3'
@@ -117,72 +117,60 @@ class IndexPage extends Component {
     playlist: [
       {
         son: son14,
-        duration: 6,
         title: 'FLASH, BONNIE BANANE '
       },
       {
         son: son1,
-        duration: 36,
-        title: 'LES ANECDOTES DE GÉRARD '
+        title: 'FOOTING MATINAL'
+
       },
       {
         son: son2,
-        duration: 21,
-        title: 'FOOTING MATINAL'
+        title: 'LES ANECDOTES DE GÉRARD '
       },
       {
         son: son3,
-        duration: 24,
-        title: 'LES TOURISTES '
-      },
-      {
-        son: son4,
-        duration: 95,
         title: 'CAFÉ + PARIS FOOT '
       },
       {
+        son: son4,
+        title: 'LES TOURISTES '
+
+      },
+      {
         son: son5,
-        duration: 8,
         title: 'NEIGE FRAîCHE '
       },
       {
         son: son6,
-        duration: 107,
         title: 'ANNABELLE DIPLÔMÉE '
       },
       {
         son: son7,
-        duration: 79,
         title: 'BERNADETTE ET LA TECHNOLOGIE '
       },
       {
         son: son8,
-        duration: 156,
         title: 'CHIT (DEEP) CHAT APÉRO '
       },
       {
         son: son9,
-        duration: 140,
         title: 'UN TAUREAU POUR 42 VACHES '
       },
       {
         son: son10,
-        duration: 51,
         title: 'COOKING TIME '
       },
       {
         son: son11,
-        duration: 95,
         title: 'NÉGOCIER LA FUTURE COLOC '
       },
       {
         son: son12,
-        duration: 109,
         title: 'SOIRÉE TEINTURE '
       },
       {
         son: son13,
-        duration: 90,
         title: 'RETOUR À PARIS  '
       }
     ],
