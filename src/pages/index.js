@@ -101,7 +101,7 @@ import p48 from '../images/p48.jpg'
 import p49 from '../images/p49.png'
 import p50 from '../images/p50.png'
 import p51 from '../images/p51.jpeg'
-import p52 from '../images/p52.jpg'
+import p52 from '../images/p53.jpg'
 
 
 
