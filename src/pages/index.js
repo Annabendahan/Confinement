@@ -194,12 +194,13 @@ class IndexPage extends Component {
     duration: 0,
     mute: false,
     volume: 50,
+    loaded: false,
     interval: setInterval(() => this.handleNextPic(), 4000)
   }
 
 
   componentDidMount = () => {
-    // setInterval(() => this.handleNextPic(), 4000);
+    setTimeout(() => this.setState({ loaded: true }), 2000);
     window.addEventListener('keydown', this.handleKeyDown);
   }
 
@@ -325,6 +326,11 @@ class IndexPage extends Component {
       <Layout>
         <SEO title="Confinement02" />
         <div className="home">
+          {this.state.loaded === false ?
+            <div className="home__loader">
+              <div class="lds-dual-ring"></div>
+            </div> : ''
+          }
 
           <div className="home__header">
             <div className="home__header__left">
@@ -336,14 +342,14 @@ class IndexPage extends Component {
             </div>
           </div>
 
+
+
           <div className="home__content">
             <img src={pic} alt='img' />
             <div onClick={(e) => this.handlePreviousPic(e)} className='home__content__left'>
             </div>
             <div onClick={(e) => this.handleNextPic2(e)} className='home__content__right'>
             </div>
-
-
           </div>
 
 
