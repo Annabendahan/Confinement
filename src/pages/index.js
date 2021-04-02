@@ -98,6 +98,11 @@ import p45 from '../images/p45.png'
 import p46 from '../images/p46.png'
 import p47 from '../images/p47.png'
 import p48 from '../images/p48.jpg'
+import p49 from '../images/p49.png'
+import p50 from '../images/p50.png'
+import p51 from '../images/p51.jpeg'
+import p52 from '../images/p52.jpg'
+
 
 
 
@@ -183,25 +188,45 @@ class IndexPage extends Component {
     ],
     playing: 'STOPPED',
     sonIndex: 0,
-    diapo: [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48],
+    diapo: [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52],
     picIndex: 0,
     position: 0,
     duration: 0,
     mute: false,
-    volume: 50
+    volume: 50,
+    interval: setInterval(() => this.handleNextPic(), 4000)
   }
 
 
   componentDidMount = () => {
-    setInterval(() => this.handleNextPic(), 1500);
+    // setInterval(() => this.handleNextPic(), 4000);
   }
 
 
   handleNextPic = () => {
-    if (this.state.picIndex == 47) {
+
+    if (this.state.picIndex === this.state.diapo.length - 1) {
       this.setState({ picIndex: 0 });
     } else {
       this.setState({ picIndex: this.state.picIndex + 1 });
+    }
+  }
+
+  handleNextPic2 = () => {
+    clearInterval(this.state.interval);
+    if (this.state.picIndex === this.state.diapo.length - 1) {
+      this.setState({ picIndex: 0 });
+    } else {
+      this.setState({ picIndex: this.state.picIndex + 1 });
+    }
+  }
+
+  handlePreviousPic = () => {
+    clearInterval(this.state.interval);
+    if (this.state.picIndex === 0) {
+      this.setState({ picIndex: this.state.diapo.length - 1 });
+    } else {
+      this.setState({ picIndex: this.state.picIndex - 1 });
     }
   }
 
@@ -294,7 +319,10 @@ class IndexPage extends Component {
 
           <div className="home__content">
             <img src={pic} alt='img' />
-
+            <div onClick={(e) => this.handlePreviousPic()} className='home__content__left'>
+            </div>
+            <div onClick={(e) => this.handleNextPic2()} className='home__content__right'>
+            </div>
 
 
           </div>
