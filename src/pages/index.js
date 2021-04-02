@@ -118,7 +118,7 @@ class IndexPage extends Component {
       {
         son: son14,
         duration: 6,
-        title: 'RADIO CONFINEMENT '
+        title: 'FLASH, BONNIE BANANE '
       },
       {
         son: son1,
@@ -328,11 +328,11 @@ class IndexPage extends Component {
 
           <div className="home__header">
             <div className="home__header__left">
-              CONFINEMENT.<span className='times'>02</span>
+              <span className='times'>(RE)</span>CONFINEMENT
             </div>
             <div className="home__header__right">
-              LES ÉCHINES  <img className='emoji' src={flocon} alt='img' />
-              <span className='times'> 73700</span>
+              SAVOIE <img className='emoji' src={flocon} alt='img' />
+              <span className='times'> OCT-DEC20</span>
             </div>
           </div>
 
