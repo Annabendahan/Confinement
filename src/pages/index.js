@@ -133,7 +133,7 @@ class IndexPage extends Component {
       {
         son: son3,
         duration: 24,
-        title: 'LES PARISIENS '
+        title: 'LES TOURISTES '
       },
       {
         son: son4,
@@ -173,7 +173,7 @@ class IndexPage extends Component {
       {
         son: son11,
         duration: 95,
-        title: 'NÉGOCIER LA COLOC '
+        title: 'NÉGOCIER LA FUTURE COLOC '
       },
       {
         son: son12,
@@ -200,6 +200,7 @@ class IndexPage extends Component {
 
   componentDidMount = () => {
     // setInterval(() => this.handleNextPic(), 4000);
+    window.addEventListener('keydown', this.handleKeyDown);
   }
 
 
@@ -212,7 +213,7 @@ class IndexPage extends Component {
     }
   }
 
-  handleNextPic2 = () => {
+  handleNextPic2 = (e) => {
     clearInterval(this.state.interval);
     if (this.state.picIndex === this.state.diapo.length - 1) {
       this.setState({ picIndex: 0 });
@@ -221,9 +222,27 @@ class IndexPage extends Component {
     }
   }
 
+  handleKeyDown = (e) => {
+    if (e.keyCode == '39') {
+      clearInterval(this.state.interval);
+      if (this.state.picIndex == this.state.diapo.length - 1) {
+        this.setState({ picIndex: 0 });
+      } else {
+        this.setState({ picIndex: this.state.picIndex + 1 });
+      }
+    } else if (e.keyCode == '37') {
+      clearInterval(this.state.interval);
+      if (this.state.picIndex == 0) {
+        this.setState({ picIndex: this.state.diapo.length - 1 });
+      } else {
+        this.setState({ picIndex: this.state.picIndex - 1 });
+      }
+    }
+  }
+
   handlePreviousPic = () => {
     clearInterval(this.state.interval);
-    if (this.state.picIndex === 0) {
+    if (this.state.picIndex == 0) {
       this.setState({ picIndex: this.state.diapo.length - 1 });
     } else {
       this.setState({ picIndex: this.state.picIndex - 1 });
@@ -252,7 +271,7 @@ class IndexPage extends Component {
 
 
   handleMute = () => {
-    if (this.state.volume === 0) {
+    if (this.state.volume == 0) {
       this.setState({
         volume: 70
       })
@@ -319,9 +338,9 @@ class IndexPage extends Component {
 
           <div className="home__content">
             <img src={pic} alt='img' />
-            <div onClick={(e) => this.handlePreviousPic()} className='home__content__left'>
+            <div onClick={(e) => this.handlePreviousPic(e)} className='home__content__left'>
             </div>
-            <div onClick={(e) => this.handleNextPic2()} className='home__content__right'>
+            <div onClick={(e) => this.handleNextPic2(e)} className='home__content__right'>
             </div>
 
 
@@ -347,7 +366,7 @@ class IndexPage extends Component {
                 <div className="home__footer__player__infos__globalline" >
                   <div className="home__footer__player__infos__globalline__time" >
                     {this.millisToMinutesAndSeconds(this.state.position)}
-                    <span class="home__footer__player__infos__globalline__time__right"> {this.millisToMinutesAndSeconds(this.state.duration)}</span>
+                    <span className="home__footer__player__infos__globalline__time__right"> {this.millisToMinutesAndSeconds(this.state.duration)}</span>
                   </div>
 
                   <div className="home__footer__player__infos__line" >
