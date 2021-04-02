@@ -128,7 +128,7 @@ class IndexPage extends Component {
       {
         son: son2,
         duration: 21,
-        title: 'FOOTING MATINAL '
+        title: 'FOOTING MATINAL'
       },
       {
         son: son3,
