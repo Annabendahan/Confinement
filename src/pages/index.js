@@ -50,8 +50,8 @@ import flocon from '../images/flocon.svg'
 
 import raf from '../images/raf.gif'
 
-import p1 from '../images/p1.jpg'
-import p2 from '../images/p2.png'
+import p1 from '../images/p1.png'
+import p2 from '../images/p2.jpg'
 import p3 from '../images/p3.png'
 import p4 from '../images/p4.png'
 import p5 from '../images/p5.jpg'
@@ -180,7 +180,7 @@ class IndexPage extends Component {
     ],
     playing: 'STOPPED',
     sonIndex: 0,
-    diapo: [p1, p1, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p53, p54],
+    diapo: [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p53, p54],
     picIndex: 0,
     position: 0,
     duration: 0,
