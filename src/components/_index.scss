@@ -23,8 +23,11 @@
         align-items: center;
         justify-content: space-around;
         &__img{
-            width: 10%;
+            width: 20%;
             margin:auto;
+            @include breakpoint(s){
+                width: 10%;
+            }
         }
     }
     &__header{
@@ -49,7 +52,7 @@
         display: flex;
         position: relative;
         flex-direction: column;
-        height: 94%;
+        height: 88%;
         @include breakpoint(s){
             height: 88%;
         }
