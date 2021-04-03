@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Confinement O2`,
+    title: `RECONFINEMENT`,
     description: `Les Echines Dessous, Savoie`,
     author: `Anna Bendahan`,
   },
