@@ -48,7 +48,7 @@ import cd from '../images/cd2.svg'
 import music from '../images/music.svg'
 import flocon from '../images/flocon.svg'
 
-
+import raf from '../images/raf.gif'
 
 import p1 from '../images/p1.jpg'
 import p2 from '../images/p2.png'
@@ -102,6 +102,10 @@ import p49 from '../images/p49.png'
 import p50 from '../images/p50.png'
 import p51 from '../images/p51.jpeg'
 import p52 from '../images/p53.jpg'
+import p53 from '../images/p54.jpg'
+import p54 from '../images/p55.jpg'
+
+
 
 
 
@@ -176,20 +180,27 @@ class IndexPage extends Component {
     ],
     playing: 'STOPPED',
     sonIndex: 0,
-    diapo: [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52],
+    diapo: [p1, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49, p50, p51, p52, p53, p54],
     picIndex: 0,
     position: 0,
     duration: 0,
     mute: false,
     volume: 50,
     loaded: false,
+    translate: false,
     interval: setInterval(() => this.handleNextPic(), 4000)
   }
 
 
   componentDidMount = () => {
-    setTimeout(() => this.setState({ loaded: true }), 2000);
+    setTimeout(() => this.setState({ loaded: true }), 5000);
     window.addEventListener('keydown', this.handleKeyDown);
+    setInterval(() => this.handleTranslate(), 4000);
+  }
+
+
+  handleTranslate = () => {
+    this.setState({ translate: !this.state.translate })
   }
 
 
@@ -316,6 +327,7 @@ class IndexPage extends Component {
         <div className="home">
           {this.state.loaded === false ?
             <div className="home__loader">
+              <img className="home__loader__img" src={raf} alt='img' />
               <div class="lds-dual-ring"></div>
             </div> : ''
           }
@@ -369,7 +381,10 @@ class IndexPage extends Component {
                     <div className="home__footer__player__infos__line__over" onClick={(event) => this.handleClick(event)} style={{ margin: 'auto', width: '200px', height: '8px' }}> </div>
 
                   </div>
-                  <div className="home__footer__player__infos__line__title" ><span className='times'> {soundNb}/{playlistLength}  </span> <img style={{ padding: '5px 4px' }} src={miniline} alt='img' /> {this.state.playlist[this.state.sonIndex].title}
+                  <div className="home__footer__player__infos__line__title" >
+                    <span className='times'> {soundNb}/{playlistLength}  </span>
+                    <img style={{ padding: '5px 4px' }} src={miniline} alt='img' />
+                    {this.state.playlist[this.state.sonIndex].title}
                     {this.state.sonIndex === 0 ? <img className='emoji' src={music} alt='img' /> : ''} {this.state.sonIndex === 5 ? <img className='emoji' src={flocon} alt='img' /> : ''}
                   </div>
                   <br />
